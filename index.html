@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
+<div class="container ">
 
     <section class="row" id="top-portion">
     <div style="background-color: aqua" class="col text-center">
@@ -27,13 +27,35 @@
                 </h2>
             </div>
         </div>
-
+<!--// right form start-->
         <div class="col-6" id="form-coffee-name" style="background-color: green">
-            <h2>breakfast</h2>
-            <h2>frenc</h2>
-            <h2>mexican vanilla</h2>
-        </div>
+            <form>
+                <fieldset disabled>
+                    <div class="mb-3">
+                        <label for="activeSelect" class="form-label">
+                            Roast
+                        </label>
+                        <select id="activeSelect" class="form-select">
+                            <option>
+                                all
+                            </option>
+                        </select>
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="disabledTextInput" class="form-label">
+                            Roast
+                        </label>
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary col-12">
+                        Submit
+                    </button>
+                </fieldset>
+            </form>
+        </div>
+<!--//form ends here-->
     </section>
 <!--////table heading end-->
 

@@ -113,12 +113,14 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-console.log(submitButton)
-console.log(updateCoffees())
+let selectButton = document.querySelectorAll('clickme');
+
+console.log(selectButton)
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('click', updateCoffees);
 
 
 let coffeeDisplay = document.getElementsByClassName('coffee-display')

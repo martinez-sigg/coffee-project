@@ -120,7 +120,7 @@ console.log(selectButton)
 
 tbody.innerHTML = renderCoffees(coffees);
 
-roastSelection.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
 
 
 let coffeeDisplay = document.getElementsByClassName('coffee-display')

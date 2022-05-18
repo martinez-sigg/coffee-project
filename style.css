@@ -29,3 +29,14 @@
 #myUL li a:hover:not(.header) {
     background-color: #eee;
 }
+
+#top-image{
+    background-image: url("img/fpic.png");
+    height: auto;
+    width: auto;
+}
+
+/*body{*/
+/*    background-image: url("demo.gif");*/
+/*}*/
+

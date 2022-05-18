@@ -66,6 +66,16 @@ function renderCoffee(coffee) {
     return html;
 }
 
+function renderCoffeesSearch(coffees) {
+    var html = '';
+
+    for(let i = 0; i < coffees.length; i++) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
+
+
 
 function renderCoffees(coffees) {
     var html = '';
@@ -90,16 +100,18 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function testingPushSearch() {
+
+function testPush() {
     let input = document.querySelector('#testing')
+
     let filteredCoffees = []
 
-    coffees.forEach(function(coffee) {
-        if (coffee.name.includes(input.value)) {
-            filteredCoffees.push(coffee.name.includes(input.value));
+    coffees.forEach(function (coffee) {
+        if (coffee.name.toLowerCase().includes(input.value.toLowerCase())) {
+            filteredCoffees.push(coffee);
         }
-    });
-    console.log(tbody.innerHTML = renderCoffees(filteredCoffees));
+    })
+    tbody.innerHTML = renderCoffees(filteredCoffees)
 }
 
 
@@ -152,9 +164,10 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+
 let searchBar = document.querySelector('#testing')
 
-searchBar.addEventListener('input',testingPushSearch)
+searchBar.addEventListener('input',testPush)
 
 tbody.innerHTML = renderCoffees(coffees);
 

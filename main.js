@@ -60,8 +60,8 @@
 // ----------------------------------------------------
 
 function renderCoffee(coffee) {
-    let html = '<ul style="background-color: pink" class=" col-6 list-unstyled">';
-    html += '<li>' + coffee.name + ' ' + coffee.roast + '</li></ul>';
+    let html = '<ul style="background-color: pink" class=" col-6 list-unstyled d-flex align-items-center mt-4">';
+    html += '<li> <span>' + coffee.name + '</span> <span class="text-muted">' + coffee.roast + '</span></li></ul>';
 
     return html;
 }

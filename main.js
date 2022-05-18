@@ -61,24 +61,16 @@
 
 function renderCoffee(coffee) {
     let html = '<ul style="background-color: pink" class=" col-6 list-unstyled">';
-    html += '<li class="col-6">' + coffee.name + ' ' + coffee.roast + '</li>';
-    html += '</ul>';
+    html += '<li>' + coffee.name + ' ' + coffee.roast + '</li></ul>';
 
     return html;
 }
 
 
-// function renderCoffees(coffees) {
-//     var html = '';
-//     for(var i = coffees.length - 1; i <= 0; i++) {
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
-
 function renderCoffees(coffees) {
     var html = '';
-for(let i = 0; i < coffees.length; i++) {
+
+    for(let i = 0; i < coffees.length; i++) {
     html += renderCoffee(coffees[i]);
 }
     return html;
@@ -91,10 +83,28 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        }if (selectedRoast === 'id'){
+            filteredCoffees.push(coffee)
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+function testingPushSearch() {
+    let input = document.querySelector('#testing')
+    let filteredCoffees = []
+
+    coffees.forEach(function(coffee) {
+        if (coffee.name.includes(input.value)) {
+            filteredCoffees.push(coffee.name.includes(input.value));
+        }
+    });
+    console.log(tbody.innerHTML = renderCoffees(filteredCoffees));
+}
+
+
+
+
 
 //search function start
 function myFunction() {
@@ -113,8 +123,6 @@ function myFunction() {
         }
     }
 }
-
-// search function end
 
 
 
@@ -144,15 +152,11 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+let searchBar = document.querySelector('#testing')
 
-let selectButton = document.querySelectorAll('clickme');
-
-console.log(selectButton)
-
+searchBar.addEventListener('input',testingPushSearch)
 
 tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffees);
 
-
-let coffeeDisplay = document.getElementsByClassName('coffee-display')

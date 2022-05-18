@@ -18,7 +18,7 @@
 #myUL li a {
     border: 1px solid #ddd;
     margin-top: -1px; /* Prevent double borders */
-    background-color: #f6f6f6;
+    background-color: #d5c4c4;
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
@@ -27,16 +27,23 @@
 }
 
 #myUL li a:hover:not(.header) {
-    background-color: #eee;
+    background-color: rgba(234, 155, 16, 0.91);
 }
 
-#top-image{
-    background-image: url("img/fpic.png");
-    height: auto;
-    width: auto;
+
+#right-side-inputs{
+    background-color: orange;
 }
 
-/*body{*/
-/*    background-image: url("demo.gif");*/
+#coffee-title{
+    font-family: "Arial Unicode MS";
+    font-weight: bolder;
+}
+
+/*#tv{*/
+/*    background-image: url("img/will-smith-chris-rock.gif");*/
 /*}*/
+body{
+    background-color: orange
+}
 

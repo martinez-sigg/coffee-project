@@ -61,17 +61,8 @@
 
 function renderCoffee(coffee) {
     let html = '<ul style="" class="text-white col-6 list-unstyled d-flex align-items-center mt-5 fw-bold">';
-    html += '<li> <span>' + coffee.name + '</span> <span class="text-muted">' + coffee.roast + '</span></li></ul>';
+    html += '<li> <a class="text-white" href="">' + coffee.name + '</a> <a class="text-muted">' + coffee.roast + '</a></li></ul>';
 
-    return html;
-}
-
-function renderCoffeesSearch(coffees) {
-    var html = '';
-
-    for(let i = 0; i < coffees.length; i++) {
-        html += renderCoffee(coffees[i]);
-    }
     return html;
 }
 
@@ -119,22 +110,22 @@ function testPush() {
 
 
 //search function start
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
+// function myFunction() {
+//     var input, filter, ul, li, a, i, txtValue;
+//     input = document.getElementById("myInput");
+//     filter = input.value.toUpperCase();
+//     ul = document.getElementById("myUL");
+//     li = ul.getElementsByTagName("li");
+//     for (i = 0; i < li.length; i++) {
+//         a = li[i].getElementsByTagName("a")[0];
+//         txtValue = a.textContent || a.innerText;
+//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//             li[i].style.display = "";
+//         } else {
+//             li[i].style.display = "none";
+//         }
+//     }
+// }
 
 
 
@@ -162,7 +153,7 @@ var coffees = [
 
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 let searchBar = document.querySelector('#testing')
